@@ -1,10 +1,10 @@
 {
-	"id": "obsidian-code-language-completer",
+	"id": "code-language-completer",
 	"name": "Code Language Completer",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
-	"description": "autosuggests and completes codeblock language options based on history",
+	"description": "Autosuggests and completes codeblock language options based on history.",
 	"author": "Stanley Wang",
 	"authorUrl": "https://github.com/Stanley-Wang910",
-	"isDesktopOnly": false
+	"isDesktopOnly": true
 }
