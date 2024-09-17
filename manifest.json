@@ -1,5 +1,5 @@
 {
-	"id": "code-language-suggester",
+	"id": "obsidian-code-language-completer",
 	"name": "Code Language Completer",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
