@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "code-language-suggester",
+	"name": "Code Language Completer",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "autosuggests and completes codeblock language options based on history",
+	"author": "Stanley Wang",
+	"authorUrl": "https://github.com/Stanley-Wang910",
 	"isDesktopOnly": false
 }
