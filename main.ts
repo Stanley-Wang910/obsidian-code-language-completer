@@ -1,14 +1,11 @@
 import {
 	App,
 	Editor,
-	editorInfoField,
 	EditorPosition,
 	EditorSuggest,
 	EditorSuggestContext,
 	EditorSuggestTriggerInfo,
 	MarkdownView,
-	Modal,
-	Notice,
 	Plugin,
 	PluginSettingTab,
 	Setting,
@@ -48,12 +45,6 @@ export default class CodeBlockInserterPlugin extends Plugin {
 					ch: cursor.ch + 3,
 				});
 			},
-			hotkeys: [
-				{
-					modifiers: ["Mod", "Shift"],
-					key: "C",
-				},
-			],
 		});
 		this.addSettingTab(new CodeBlockInserterSettingTab(this.app, this));
 	}
