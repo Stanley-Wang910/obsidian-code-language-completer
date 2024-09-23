@@ -36,7 +36,7 @@ export default class CodeBlockInserterPlugin extends Plugin {
 
 		this.addCommand({
 			id: "insert-code-block-custom",
-			name: "Insert Code Block (Custom)",
+			name: "Insert code block",
 			editorCallback: (editor: Editor, view: MarkdownView) => {
 				const cursor = editor.getCursor();
 				editor.replaceRange("```\n\n```", cursor);
@@ -185,7 +185,7 @@ class CodeBlockInserterSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName("Last Used Language")
+			.setName("Last used language")
 			.setDesc("The last programming language you used in a code block.")
 			.addText((text) =>
 				text
@@ -197,7 +197,7 @@ class CodeBlockInserterSettingTab extends PluginSettingTab {
 					}),
 			);
 		new Setting(containerEl)
-			.setName("Additional Languages")
+			.setName("Additional languages")
 			.setDesc("Add more languages (comma-separated).")
 			.addTextArea((text) =>
 				text
@@ -213,7 +213,7 @@ class CodeBlockInserterSettingTab extends PluginSettingTab {
 			);
 
 		new Setting(containerEl)
-			.setName("Reset Last Used Language")
+			.setName("Reset last used language")
 			.setDesc("Clear the last used language.")
 			.addButton((button) =>
 				button.setButtonText("Reset").onClick(async () => {
