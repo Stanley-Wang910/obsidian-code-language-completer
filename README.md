@@ -2,7 +2,8 @@
 
 a simple plugin that offers a quality-of-life improvement to inserting code blocks in obsidian
 
-https://github.com/user-attachments/assets/38361348-88be-4528-b905-a37bda391f76
+![code-language-completer-demo](https://github.com/user-attachments/assets/7fc16481-a2a8-4137-96de-365a21297352)
+
 
 features:
 
