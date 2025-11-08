@@ -157,8 +157,12 @@ class LanguageSuggester extends EditorSuggest<string> {
 	selectSuggestion(lang: string, evt: MouseEvent | KeyboardEvent): void {
 		const { editor, start, end } = this.context!;
 		const nextLine = editor.getLine(start.line + 1);
-		const isCodeEnd = nextLine.startsWith("```");
-		editor.replaceRange(isCodeEnd ? lang + "\n" : lang, start, end);
+		const isCodeEnd = nextLine.trim().startsWith("```");
+		editor.replaceRange(
+			isCodeEnd ? lang + "\n" + nextLine.replace("```", "") : lang,
+			start,
+			end
+		);
 
 		// update last used language
 		this.plugin.settings.lastUsedLanguage = lang;
@@ -167,7 +171,7 @@ class LanguageSuggester extends EditorSuggest<string> {
 		// editor.setCursor(end.line, start.ch + lang.length);
 		const newCursorPos = {
 			line: end.line + 1,
-			ch: isCodeEnd ? 0 : nextLine.length,
+			ch: editor.getLine(start.line + 1).length,
 		};
 		editor.setCursor(newCursorPos);
 	}
